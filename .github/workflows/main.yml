@@ -9,9 +9,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+    - name: Azure Storage Action
+      uses: lauchacarro/Azure-Storage-Action@v1.0
+      with:
+        # Connection String of the Azure Storage Container
+        connection-string: ${{ secrets.UKS_Storage_Key }}
+        # Folder what contains the files for upload to Storage Container
+        folder: /webroot
+        # Name of Blob Container Storage
+        blob-container-name: $web
+        # Enabled static website
+        enabled-static-website: true
