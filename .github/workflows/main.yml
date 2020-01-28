@@ -14,10 +14,22 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az storage blob upload-batch -d "$web" -s webroot --connection-string ${{secrets.UKS_Storage_Key}}
+          az storage blob upload-batch -d '$web' -s webroot --connection-string '${{secrets.UKS_Storage_Key}}'
     - name: Azure CLI script
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az storage blob upload-batch -d "$web" -s webroot --connection-string ${{secrets.AUE_Storage_Key}}
+          az storage blob upload-batch -d '$web' -s webroot --connection-string '${{secrets.AUE_Storage_Key}}' 
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+          az login --service-principal --tenant 2758a162-aed8-494a-85c0-6f1f9dfcb176 -u 5ce3ee02-92ce-4931-a1c8-4644580eac38 -p ${{secrets.AFD_SP}}
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+          az rest --method post --uri 'https://management.azure.com/subscriptions/e811ecc8-1488-4a30-b95f-0baf021b3837/resourceGroups/willeastgeo/providers/Microsoft.Network/frontDoors/willeastburyfd/purge?api-version=2019-05-01' --body '{contentPaths: ["/*"]}'
