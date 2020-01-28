@@ -14,13 +14,13 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az storage blob upload-batch -d '$web' -s webroot --connection-string '${{secrets.UKS_Storage_Key}}'
+          az storage blob upload-batch -d '$web' -s webroot --connection-string '${{secrets.UKS_Storage_Key}}' --content-cache-control 'max-age=31536000'
     - name: Azure CLI script
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az storage blob upload-batch -d '$web' -s webroot --connection-string '${{secrets.AUE_Storage_Key}}' 
+          az storage blob upload-batch -d '$web' -s webroot --connection-string '${{secrets.AUE_Storage_Key}}' --content-cache-control 'max-age=31536000'
     - name: Azure CLI script
       uses: azure/CLI@v1
       with:
