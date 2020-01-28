@@ -15,7 +15,7 @@ jobs:
         # Connection String of the Azure Storage Container
         connection-string: ${{ secrets.UKS_Storage_Key }}
         # Folder what contains the files for upload to Storage Container
-        folder: /webroot
+        folder: /webroot/*
         # Name of Blob Container Storage
         blob-container-name: $web
         # Enabled static website
