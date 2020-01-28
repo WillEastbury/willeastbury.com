@@ -32,4 +32,4 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az rest --method post --uri 'https://management.azure.com/subscriptions/e811ecc8-1488-4a30-b95f-0baf021b3837/resourceGroups/willeastgeo/providers/Microsoft.Network/frontDoors/willeastburyfd/purge?api-version=2019-05-01' --body '{contentPaths: ["/*"]}' --headers Content-Type=application/json 
+          az rest --method post --uri 'https://management.azure.com/subscriptions/e811ecc8-1488-4a30-b95f-0baf021b3837/resourceGroups/willeastgeo/providers/Microsoft.Network/frontDoors/willeastburyfd/purge?api-version=2019-05-01' --body '{contentPaths: ["/","/*","/images/*"]}' --headers Content-Type=application/json 
