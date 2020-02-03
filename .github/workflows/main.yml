@@ -9,6 +9,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name:  make script exe
+      run: chmod +x /home/runner/work/willeastbury.com/willeastbury.com/webroot/blogpages/buildstatic.sh
     - name: Install Dependencies
       run: /home/runner/work/willeastbury.com/willeastbury.com/webroot/blogpages/buildstatic.sh
     - name: Azure CLI script
