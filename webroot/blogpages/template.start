@@ -38,8 +38,8 @@
       </div>
     </div>
   </nav>
-  <section id="blog" class="about-section text-center">
+  <section id="blog" class="">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
-          <p class="text-white-50">
+          <p class="">
