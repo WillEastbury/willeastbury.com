@@ -9,29 +9,29 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name:  make script exe
+    - name:  make script executable
       run: chmod +x /home/runner/work/willeastbury.com/willeastbury.com/webroot/blogpages/buildstatic.sh
-    - name: Install Dependencies
+    - name: Build Static Content from Markdown
       run: /home/runner/work/willeastbury.com/willeastbury.com/webroot/blogpages/buildstatic.sh
-    - name: Azure CLI script
+    - name: Upload to UK SOUTH
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
           az storage blob upload-batch -d '$web' -s webroot --connection-string '${{secrets.UKS_Storage_Key}}' --content-cache-control 'max-age=31536000'
-    - name: Azure CLI script
+    - name: Upload to AUS EAST
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
           az storage blob upload-batch -d '$web' -s webroot --connection-string '${{secrets.AUE_Storage_Key}}' --content-cache-control 'max-age=31536000'
-    - name: Azure CLI script
+    - name: Login to CLI with service principal
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
           az login --service-principal --tenant 2758a162-aed8-494a-85c0-6f1f9dfcb176 -u 5ce3ee02-92ce-4931-a1c8-4644580eac38 -p ${{secrets.AFD_SP}}
-    - name: Azure CLI script
+    - name: Purge FrontDoor Endpoint
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
