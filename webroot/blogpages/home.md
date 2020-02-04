@@ -3,7 +3,7 @@
       <!-- Project One Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="img-fluid" src="/img/20180904_200030.jpg" alt="Cloud tent at the NEC">
+          <img class="img-fluid" src="/img/20180904_200030.jpg" alt="Bradley with the Botty Mc Bot Face Bot :)">
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
@@ -23,7 +23,6 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">My cloud blog posts</h2>
             <p class="text-white-50">
               <ul>    
                 <li><a href="/blogpages/buccaneer.html">Let's build a giant Pirate Ship</a></li>
