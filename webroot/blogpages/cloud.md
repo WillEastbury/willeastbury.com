@@ -26,9 +26,9 @@
             <h2 class="text-white mb-4">My cloud blog posts</h2>
             <p class="text-white-50">
               <ul>    
-                  <li>Buccaneer, for Azure Functions</li>
-                  <li>Azure Mythbusters, Series 1</li>
-                  <li>Azure Mythbusters, Series 2</li>
+                  <li><a href="/blogpages/buccaneer.html">Buccaneer, Simple Swagger gen for netcore3.1 (including functions)</a></li>
+                  <li><a href="/blogpages/azuremythbusters1.html">Azure Mythbusters, Series 1</li>
+                  <li><a href="/blogpages/azuremythbusters2.html">Azure Mythbusters, Series 2</li>
               </ul>  
             </p>
           </div>
