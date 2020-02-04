@@ -23,13 +23,13 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
-            <h2 class="text-white mb-4">About Will Eastbury</h2>
+            <h2 class="text-white mb-4">My cloud blog posts</h2>
             <p class="text-white-50">
-                
-- Buccaneer, for Azure Functions
-- Azure Mythbusters (Series 1)
-- Azure Mythbusters (Series 2)
-
+              <ul>    
+                  <li>Buccaneer, for Azure Functions</li>
+                  <li>Azure Mythbusters, Series 1</li>
+                  <li>Azure Mythbusters, Series 2</li>
+              </ul>  
             </p>
           </div>
         </div>
