@@ -25,13 +25,14 @@
           <div class="col-lg-8 mx-auto">
             <h2 class="text-white mb-4">About Will Eastbury</h2>
             <p class="text-white-50">
+                
 - Buccaneer, for Azure Functions
 - Azure Mythbusters (Series 1)
 - Azure Mythbusters (Series 2)
+
             </p>
           </div>
         </div>
-
       </div>
     </section>
 
