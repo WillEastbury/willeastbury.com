@@ -1,0 +1,4 @@
+projectname,docslink,description
+Http Async Request Reply Pattern, https://docs.microsoft.com/en-us/azure/architecture/patterns/async-request-reply, Faking asynchronous communications when the communication path is synchronous across http but the request and reply need to be decoupled.
+Geodes, https://docs.microsoft.com/en-us/azure/architecture/patterns/geodes, How to build highly performant ultra HA enabled geographically redundant services that scale massively and can survive the loss of multiple regions of service.
+Securing Serverless APIs, https://docs.microsoft.com/en-us/azure/api-management/howto-protect-backend-frontend-azure-ad-b2c, How to use Azure API Management + Azure Active Directory B2C + Azure Functions to create and secure a Single Page App Backend hosted as a serverless API.

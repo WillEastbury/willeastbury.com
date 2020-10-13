@@ -1,0 +1,54 @@
+---
+layout: default
+title: Events
+---
+<section  id="events" class="projects-section bg-white">
+    <div class="container">
+        <!-- Featured Project Row-->
+        <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+            <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="images\IMG_3133.JPG" alt=""></div>
+            <div class="col-xl-4 col-lg-5">
+                <div class="featured-text text-center text-lg-left">
+                <h4>Events</h4>
+                <p class="text-black-50 mb-0">If you would like me to present at your event, connect for mentoring or just join
+                    my linked in network? ... the best way to reach out is over LinkedIn - please feel free to add
+                    me to your network, just send me a note saying you found my site when you add me.</p>
+                </div>
+            </div>
+        </div>
+        {% for event in site.data.events %}
+        {% if event.futureeventyn == "Y" %}
+                <!-- Project One Row-->
+                <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                        <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <h4 class="text-white">{{event.eventname}}</h4>
+                            <p class="mb-0 text-white-50"> {{ event.eventdate}} @ {{ event.location}}</p>
+                                <a href="{{event.registerlink}}">Sign Up</a>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                {% else %}
+                <!-- Project Two Row-->
+                <div class="row justify-content-center no-gutters">
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-white text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-black">(Past Event){{event.eventname}}</h4>
+                                <p class="mb-0 text-black-50"> {{ event.eventdate}} @ {{ event.location }}</p>
+                            <hr class="d-none d-lg-block mb-0 mr-0">
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </section>
